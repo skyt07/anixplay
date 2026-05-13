@@ -41,4 +41,8 @@ yarn-error.log*
 next-env.d.ts
 
 # ignore pages that are not yet implemented
-/src/app/(pages)/
+/src/app/%28pages%29/az-list/page.tsx
+/src/app/%28pages%29/browser/page.tsx
+/src/app/%28pages%29/genres/page.tsx
+/src/app/%28pages%29/user/page.tsx
+/src/app/%28pages%29/watch/page.tsx
