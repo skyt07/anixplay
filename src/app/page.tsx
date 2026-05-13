@@ -1,5 +1,4 @@
 // import HeroCarousel from "@/components/HeroCarousel";
-
 import ShareSite from "@/components/ShareSite";
 
 export default function Home() {
