@@ -1,11 +1,11 @@
-import HeroCarousel from "@/components/HeroCarousel";
+// import HeroCarousel from "@/components/HeroCarousel";
 
 import ShareSite from "@/components/ShareSite";
 
 export default function Home() {
   return (
     <>
-      <HeroCarousel />
+      {/* <HeroCarousel /> */}
       <section>
         <main>
           <ShareSite />
