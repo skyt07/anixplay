@@ -6,3 +6,4 @@ const AZ_list = () => {
     </div>
   );
 };
+export default AZ_list;
