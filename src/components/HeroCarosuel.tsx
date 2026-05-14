@@ -1,13 +1,11 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-
 import Image from "next/image";
 import Link from "next/link";
-
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-
+import { heroData } from "@/data/heroData";
 import {
   BookmarkIcon,
   ChevronLeft,
@@ -15,8 +13,6 @@ import {
   PlayIcon,
   StarIcon,
 } from "lucide-react";
-
-import { heroData } from "@/data/heroData";
 
 const autoplay = Autoplay({
   delay: 7000,
@@ -37,15 +33,11 @@ const HeroCarousel = () => {
 
   useEffect(() => {
     if (!emblaApi) return;
-
     const onSelect = () => {
       setIndex(emblaApi.selectedScrollSnap());
     };
-
     emblaApi.on("select", onSelect);
-
     onSelect();
-
     return () => {
       emblaApi.off("select", onSelect);
     };
@@ -110,7 +102,6 @@ const HeroCarousel = () => {
                         size={20}
                         className="fill-yellow-300 stroke-yellow-300"
                       />
-
                       <span className="font-medium">
                         {anime.averageScore ?? "?"}
                       </span>
@@ -123,10 +114,8 @@ const HeroCarousel = () => {
                         className="flex items-center gap-2 px-5 py-3 transition-all border rounded-lg border-white/20 bg-white/5 hover:bg-white/10 hover:scale-105 hover:text-green-300 active:scale-95"
                       >
                         <PlayIcon className="w-5 h-5 fill-current" />
-
                         <span>Watch Now</span>
                       </Link>
-
                       <button className="p-3 transition-all border rounded-lg border-white/20 bg-white/5 hover:bg-white/10 hover:text-green-300 active:scale-95">
                         <BookmarkIcon className="w-5 h-5 fill-current" />
                       </button>
@@ -147,13 +136,10 @@ const HeroCarousel = () => {
         >
           <ChevronLeft />
         </button>
-
         <div className="flex items-center justify-center h-10 px-3 border rounded-lg border-white/20 bg-white/10 backdrop-blur-md">
           <span className="text-lg font-semibold">{index + 1}</span>
-
           <span className="mx-1 text-sm opacity-70">/ {heroData.length}</span>
         </div>
-
         <button
           onClick={scrollNext}
           className="p-2 transition-all border rounded-lg border-white/20 bg-white/10 hover:bg-white/20 active:scale-95"
