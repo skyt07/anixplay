@@ -41,4 +41,4 @@ yarn-error.log*
 next-env.d.ts
 
 # ignore pages that are not yet implemented
-/src/app/(pages)
+# /src/app/(pages)

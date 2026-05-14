@@ -1,3 +1,4 @@
+import Link from "next/link";
 import SiteLogo from "./ui/SiteLogo";
 
 const Header = () => {
@@ -5,7 +6,9 @@ const Header = () => {
     <div className="">
       <header className="w-16">
         <div>
-          <SiteLogo />
+          <Link href="/">
+            <SiteLogo />
+          </Link>
         </div>
       </header>
     </div>

@@ -1,11 +1,10 @@
-// import HeroCarousel from "@/components/HeroCarousel";
+import HeroCarousel from "@/components/HeroCarosuel";
 import ShareSite from "@/components/ShareSite";
 
 export default function Home() {
   return (
     <>
-      <h1>hello Anixplay</h1>
-      {/* <HeroCarousel />  */}
+      <HeroCarousel />
       <section>
         <main>
           <ShareSite />
