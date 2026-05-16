@@ -1,22 +1,34 @@
-export const Button1 = ({ children }: { children: React.ReactNode }) => {
-  return <button className="">{children}</button>;
-};
+import { ButtonHTMLAttributes, ReactNode } from "react";
 
-export const Button2 = ({ children }: { children: React.ReactNode }) => {
-  return <button className="">{children}</button>;
-};
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  children: ReactNode;
 
-export const Button3 = ({ children }: { children: React.ReactNode }) => {
-  return <button className="">{children}</button>;
-};
+  variant?: "hero" | "primary" | "secondary" | "ghost";
+}
 
-export const Button4 = ({ children }: { children: React.ReactNode }) => {
-  return <button className="">{children}</button>;
-};
+export const Button = ({
+  children,
+  variant = "primary",
+  className = "",
+  ...props
+}: ButtonProps) => {
+  const variants = {
+    // Hero Carosuel controls
+    hero: "p-2 border border-white/20 bg-white/10 hover:bg-white/20",
 
-export const Button5 = ({ children }: { children: React.ReactNode }) => {
-  return <button className="">{children}</button>;
-};
-export const Button6 = ({ children }: { children: React.ReactNode }) => {
-  return <button className="">{children}</button>;
+    primary: "px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white",
+
+    secondary: "px-4 py-2 bg-zinc-700 hover:bg-zinc-600 text-white",
+
+    ghost: "px-4 py-2 hover:bg-white/10",
+  };
+
+  return (
+    <button
+      className={`rounded-lg transition-all active:scale-95 ${variants[variant]} ${className}`}
+      {...props}
+    >
+      {children}
+    </button>
+  );
 };

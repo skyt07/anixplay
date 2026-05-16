@@ -13,6 +13,7 @@ import {
   PlayIcon,
   StarIcon,
 } from "lucide-react";
+import { Button } from "./ui/Button";
 
 const autoplay = Autoplay({
   delay: 7000,
@@ -140,12 +141,9 @@ const HeroCarousel = () => {
           <span className="text-lg font-semibold">{index + 1}</span>
           <span className="mx-1 text-sm opacity-70">/ {heroData.length}</span>
         </div>
-        <button
-          onClick={scrollNext}
-          className="p-2 transition-all border rounded-lg border-white/20 bg-white/10 hover:bg-white/20 active:scale-95"
-        >
+        <Button variant="hero" onClick={scrollNext}>
           <ChevronRight />
-        </button>
+        </Button>
       </div>
     </section>
   );

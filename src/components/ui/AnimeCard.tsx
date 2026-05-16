@@ -1,6 +1,8 @@
 import { AnimeCardProps } from "@/types/props";
+
 import Image from "next/image";
 import Link from "next/link";
+
 import { FC } from "react";
 
 const AnimeCard: FC<AnimeCardProps> = ({
@@ -10,41 +12,46 @@ const AnimeCard: FC<AnimeCardProps> = ({
   rating,
   type,
 }) => {
-  // const AnimeCard = ({ title, cover, episodes, rating }: AnimeCardProps) => {
   return (
-    <div className="w-full mx-auto overflow-hidden ">
-      <Link href="/watch">
-        {/* Animecard ratio box with auto scaling */}
-        <div className="relative w-full h-0 md:pb-[145%] pb-[135%] rounded-xl overflow-hidden bg-gray-800 ">
+    <article className="w-full overflow-hidden group">
+      {/* Cover */}
+      <Link href="/watch" className="block">
+        <div className="relative overflow-hidden bg-gray-800 rounded-xl aspect-2/3">
           <Image
             src={cover}
             alt={title}
             fill
-            className="object-cover transition-transform duration-300 hover:scale-105"
-            sizes="(max-width: 768px) 45vw, 160px"
+            quality={100}
+            sizes="(max-width: 768px) 45vw, 220px"
+            className="object-cover transition-transform duration-300 will-change-transform group-hover:scale-105"
           />
+          {/* Overlay */}
+          <div className="absolute inset-0 transition-opacity opacity-0 bg-black/10 group-hover:opacity-100" />
         </div>
       </Link>
-      <div className="mt-1 flex flex-col justify-between h-15.75">
+
+      {/* Content */}
+      <div className="flex flex-col justify-between mt-2.5 h-15.75">
+        {/* Title */}
         <Link href="/watch">
-          <h4 className="text-sm font-medium leading-tight line-clamp-2 hover:text-foreground/60">
+          <h3 className="text-sm font-medium leading-tight transition-colors line-clamp-2 hover:text-white/70">
             {title}
-          </h4>
+          </h3>
         </Link>
-        <div className="flex items-center justify-between">
-          <div className="flex justify-center gap-1">
-            {/* Number of episodes */}
-            <span className="text-xs text-gray-400 ">
-              Ep: {episodes ?? "?"}
-            </span>
-            <span className="text-xs text-gray-400 ">
-              Rating: {rating ?? "N/A"}
-            </span>
+
+        {/* Meta */}
+        <div className="flex items-center justify-between text-xs text-gray-400">
+          <div className="flex items-center gap-1">
+            <span>sub</span>
+            <span>dub</span>
+            <span>{episodes ?? "?"}</span>
+            {/* <span>•</span> */}
+            <span>★{rating ?? "N/A"}</span>
           </div>
-          <span className="text-xs text-foreground/70">{type ?? "TV"}</span>
+          <span className="font-bold text-white/60">{type ?? "TV"}</span>
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 
