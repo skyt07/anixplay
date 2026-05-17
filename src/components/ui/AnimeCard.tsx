@@ -48,7 +48,7 @@ const AnimeCard: FC<AnimeCardProps> = ({
             {/* <span>•</span> */}
             <span>★{rating ?? "N/A"}</span>
           </div>
-          <span className="font-bold text-white/60">{type ?? "TV"}</span>
+          <span className="font-bold text-gray-400">{type ?? "TV"}</span>
         </div>
       </div>
     </article>
