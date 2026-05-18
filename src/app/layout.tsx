@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { ThemeProvider } from "next-themes";
+//Vercel Analytics
 import { Analytics } from "@vercel/analytics/next";
+
+// styles
 import "../styles/globals.css";
 import "../styles/animate.css";
 import "../styles/utils.css";
@@ -40,14 +44,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="default" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {/* Vercel Analytics */}
         <Analytics />
-        <Header />
-        {children}
-        <Footer />
+        {/* Theme Provider */}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Header />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
