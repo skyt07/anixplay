@@ -31,7 +31,7 @@ const nextConfig: NextConfig = {
     ],
     // Optional optimization
     formats: ["image/webp"],
-
+    qualities: [75, 85, 100],
     deviceSizes: [320, 420, 768, 1024, 1280],
   },
   reactCompiler: true,
