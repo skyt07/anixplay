@@ -5,13 +5,14 @@ import { ThemeProvider } from "next-themes";
 import { Analytics } from "@vercel/analytics/next";
 
 // styles
+import "../styles/themes.css";
 import "../styles/globals.css";
 import "../styles/animate.css";
 import "../styles/utils.css";
 
 // Components
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 // Fonts
 const geistSans = Geist({

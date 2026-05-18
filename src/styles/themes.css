@@ -1,0 +1,73 @@
+/* @theme */
+inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-accent: var(--accent);
+}
+
+/* =========================
+   DEFAULT LIGHT
+========================= */
+
+:root {
+  --background: #ffffff;
+  --foreground: #111111;
+  --card: #f5f5f5;
+  --accent: #3b82f6;
+}
+
+/* =========================
+   DEFAULT DARK
+========================= */
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --card: #111111;
+  --accent: #60a5fa;
+}
+
+/* =========================
+   SAKURA LIGHT
+========================= */
+
+:root[data-theme="sakura"] {
+  --background: #fff1f5;
+  --foreground: #4a1d2f;
+  --card: #ffd6e7;
+  --accent: #ff4d94;
+}
+
+/* =========================
+   SAKURA DARK
+========================= */
+
+.dark[data-theme="sakura"] {
+  --background: #1b0f14;
+  --foreground: #ffd9e7;
+  --card: #2a1720;
+  --accent: #ff7eb6;
+}
+
+/* =========================
+   OCEAN LIGHT
+========================= */
+
+:root[data-theme="ocean"] {
+  --background: #eef9ff;
+  --foreground: #123;
+  --card: #d7efff;
+  --accent: #0099ff;
+}
+
+/* =========================
+   OCEAN DARK
+========================= */
+
+.dark[data-theme="ocean"] {
+  --background: #06141f;
+  --foreground: #d7f3ff;
+  --card: #0d2538;
+  --accent: #38bdf8;
+}

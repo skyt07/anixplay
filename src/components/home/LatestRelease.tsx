@@ -1,4 +1,4 @@
-import AnimeCard from "./ui/AnimeCard";
+import AnimeCard from "../ui/AnimeCard";
 
 const latestAnime = [
   {

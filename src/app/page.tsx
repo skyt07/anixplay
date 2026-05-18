@@ -1,6 +1,6 @@
-import HeroCarousel from "@/components/HeroCarosuel";
-import ShareSite from "@/components/ShareSite";
-import LatestRelease from "@/components/LatestRelease";
+import HeroCarousel from "@/components/home/HeroCarosuel";
+import ShareSite from "@/components/home/ShareSite";
+import LatestRelease from "@/components/home/LatestRelease";
 
 export default function Home() {
   return (
