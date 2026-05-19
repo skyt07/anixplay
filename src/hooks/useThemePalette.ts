@@ -11,15 +11,12 @@ export function useThemePalette() {
 
   useEffect(() => {
     if (typeof window === "undefined") return;
-
     document.documentElement.setAttribute("data-theme", palette);
   }, [palette]);
 
   const changePalette = (newPalette: string) => {
     document.documentElement.setAttribute("data-theme", newPalette);
-
     localStorage.setItem("palette", newPalette);
-
     setPalette(newPalette);
   };
 
