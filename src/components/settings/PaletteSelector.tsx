@@ -1,6 +1,6 @@
 "use client";
 
-import { THEMES } from "@/data/themes";
+import { THEMES } from "@/constants/themes";
 import { useThemePalette } from "@/hooks/useThemePalette";
 
 export default function PaletteSelector() {
