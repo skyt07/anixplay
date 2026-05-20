@@ -1,5 +1,5 @@
 import React from "react";
-import { LogoProps } from "@/types/props";
+import { LogoProps } from "@/types/index";
 
 const SiteLogo: React.FC<LogoProps> = ({
   text = "AnixPlay",
