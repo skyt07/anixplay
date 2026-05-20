@@ -1,4 +1,5 @@
-import { AnimeCardProps } from "@/types/card";
+import { AnimeCardProps } from "@/types";
+import { watch } from "fs/promises";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -6,16 +7,19 @@ import Link from "next/link";
 import { FC } from "react";
 
 const AnimeCard: FC<AnimeCardProps> = ({
+  id,
   title,
   cover,
   episodes,
   rating,
   type,
+  watchLink,
 }) => {
   return (
     <article className="w-full overflow-hidden group">
       {/* Cover */}
-      <Link href="/watch" className="block">
+      <Link href={watchLink || `/watch/${id}`}>
+        {/* <Link href="/watch" className="block"> */}
         <div className="relative overflow-hidden bg-gray-800 rounded-xl aspect-2/3">
           <Image
             src={cover}

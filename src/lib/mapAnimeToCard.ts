@@ -8,6 +8,6 @@ export const mapAnimeToCard = (anime: AnimeProps): AnimeCardProps => {
     episodes: anime.episodes,
     type: anime.type,
     rating: anime.averageScore,
-    watchUrl: anime.watchLink?.[0]?.url ?? "#",
+    watchLink: anime.watchLink?.[0]?.url ?? "#",
   };
 };

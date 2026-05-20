@@ -1,9 +1,9 @@
 export interface AnimeCardProps {
-  id: number;
+  id?: number;
   title: string;
   cover: string;
   episodes?: number;
   type?: string;
   rating?: number;
-  watchUrl?: string;
+  watchLink?: string;
 }
