@@ -1,6 +1,4 @@
-import { AnimeCardProps } from "@/types";
-import { watch } from "fs/promises";
-
+import { AnimeCardProps } from "@/types/index";
 import Image from "next/image";
 import Link from "next/link";
 
