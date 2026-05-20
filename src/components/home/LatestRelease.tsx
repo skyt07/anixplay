@@ -69,6 +69,7 @@ const LatestRelease = () => {
         {latestAnime.map((anime) => (
           <AnimeCard
             key={anime.id}
+            id={anime.id}
             title={anime.title}
             cover={anime.cover}
             episodes={anime.episodes}
