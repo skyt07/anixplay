@@ -1,4 +1,4 @@
-import type { AnimeProps } from "@/types/props";
+import type { AnimeProps } from "@/types/index";
 
 export const heroData: AnimeProps[] = [
   {
