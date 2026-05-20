@@ -1,4 +1,4 @@
-import { AnimeCardProps } from "@/types";
+import { AnimeCardProps } from "@/types/card";
 
 import Image from "next/image";
 import Link from "next/link";
