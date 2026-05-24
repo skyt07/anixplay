@@ -1,7 +1,6 @@
 import { AnimeCardProps } from "@/types/index";
 import Image from "next/image";
 import Link from "next/link";
-
 import { FC } from "react";
 
 const AnimeCard: FC<AnimeCardProps> = ({
@@ -13,17 +12,18 @@ const AnimeCard: FC<AnimeCardProps> = ({
   type,
   watchLink,
 }) => {
+  const href = watchLink || `/watch/${id}`;
+
   return (
     <article className="w-full overflow-hidden group">
       {/* Cover */}
-      <Link href={watchLink || `/watch/${id}`}>
+      <Link href={href}>
         {/* <Link href="/watch" className="block"> */}
         <div className="relative overflow-hidden bg-gray-800 rounded-xl aspect-2/3">
           <Image
             src={cover}
             alt={title}
             fill
-            quality={100}
             sizes="(max-width: 768px) 45vw, 220px"
             className="object-cover transition-transform duration-300 will-change-transform group-hover:scale-105"
           />
@@ -35,7 +35,7 @@ const AnimeCard: FC<AnimeCardProps> = ({
       {/* Content */}
       <div className="flex flex-col justify-between mt-2.5 h-15.75">
         {/* Title */}
-        <Link href="/watch">
+        <Link href={href}>
           <h3 className="text-sm font-medium leading-tight transition-colors line-clamp-2 hover:text-white/70">
             {title}
           </h3>

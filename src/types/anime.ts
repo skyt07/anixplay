@@ -4,7 +4,7 @@ export interface AnimeTitle {
 }
 
 export interface AnimeImage {
-  large: string;
+  large?: string;
 }
 
 export interface AnimeWatchLink {

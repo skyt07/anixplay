@@ -38,7 +38,7 @@ const SiteLogo: React.FC<LogoProps> = ({
         textAnchor="middle"
         dominantBaseline="middle"
         fontSize="90"
-        fontFamily="Poppins, Arial, sans-serif"
+        fontFamily="cursive, Poppins, Arial, sans-serif"
         fill="url(#textGradient)"
         filter="url(#glow)"
       >

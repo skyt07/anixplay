@@ -33,3 +33,32 @@ const LangSwitch = () => {
 };
 
 export default LangSwitch;
+// "use client";
+
+// import { useState } from "react";
+
+// const LangSwitch = () => {
+//   const [lang, setLang] = useState<"EN" | "JP">("EN");
+
+//   return (
+//     <button
+//       onClick={() => setLang(lang === "EN" ? "JP" : "EN")}
+//       className="relative flex items-center justify-center w-10 h-10 rounded-full cursor-pointer"
+//       aria-label={`Switch to ${lang === "EN" ? "Japanese" : "English"}`}
+//     >
+//       <span
+//         className={`absolute font-bold text-sm ${lang === "EN" ? "show" : "hide-up"}`}
+//       >
+//         EN
+//       </span>
+
+//       <span
+//         className={`absolute font-bold text-sm ${lang === "JP" ? "show" : "hide-down"}`}
+//       >
+//         JP
+//       </span>
+//     </button>
+//   );
+// };
+
+// export default LangSwitch;

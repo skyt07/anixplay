@@ -1,7 +1,9 @@
 import Link from "next/link";
+import { UserIcon } from "lucide-react";
+
+import LangSwitch from "../LangSwitch";
 import SiteLogo from "../ui/SiteLogo";
 import ThemeSwitch from "../settings/ThemeSwitch";
-import { UserIcon } from "lucide-react";
 
 const Header = () => {
   return (
@@ -15,6 +17,9 @@ const Header = () => {
         <ul className="flex items-center">
           <li>
             <ThemeSwitch />
+          </li>
+          <li>
+            <LangSwitch />
           </li>
           <li className="">
             <Link href="/settings">
